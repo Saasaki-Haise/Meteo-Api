@@ -1,0 +1,62 @@
+body{
+background-color: lightgrey;
+}
+main{
+    background: url("img/clouds-3659631_1920.jpg") center;
+    width: 500px;
+    border: 5px solid red;
+    text-align: center;
+    color:rgba(0, 0, 0, 0.788);
+    font-size: 30px;
+    font-family: 'Lobster', cursive;
+    
+}
+main div {
+    display: flex;
+    align-items: center;
+}
+.global {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.global #hour {
+    font-size: 15px;
+}
+.global #lieu {
+    font-size: 60px;
+    margin: 0;
+    font-family: 'Lobster', cursive;
+}
+/* .global #hum
+.global #descript */
+.global #temp {
+    font-size: 50px;
+}
+
+
+main #bar {
+    border: 2px solid rgba(128, 128, 128, 0.432);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-weight: bold;
+    height: 40px;
+    width: 80%;
+    background: rgb(255, 255, 255);
+}
+#valid {
+    color: rgb(255, 255, 0);
+    height: 40px;
+    width: 100px;
+    background: rgba(0, 255, 76, 0.507);
+    
+
+}
+#icn {
+    height: 100px;
+}
+  
+ 
+       
