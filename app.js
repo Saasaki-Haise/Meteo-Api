@@ -14,12 +14,12 @@ validRecherche.addEventListener("click", function(){
     request(ville);
 
 })
-axios.get("http://api.apixu.com/v1/current.json?key=9e7a402560384698834100634192305&q=" + ville).then(function(rep){
+axios.get("https://api.apixu.com/v1/current.json?key=9e7a402560384698834100634192305&q=" + ville).then(function(rep){
     heure.innerHTML = rep.data.location.localtime;
 })
 
 function request (ville){
-axios.get( 'http://api.openweathermap.org/data/2.5/weather?q='+ ville + '&units=metric'+'&APPID=' + APIKey)
+axios.get( 'https://api.openweathermap.org/data/2.5/weather?q='+ ville + '&units=metric'+'&APPID=' + APIKey)
 .then(function(response){
     console.log(response);
     var Temp = response.data.main.temp;
@@ -28,7 +28,7 @@ axios.get( 'http://api.openweathermap.org/data/2.5/weather?q='+ ville + '&units=
     humiditer.innerHTML = Humide+"%" ;
     nameVille.innerHTML = response.data.name;
     descript.innerHTML = response.data.weather[0].description;
-    axios.get("http://api.apixu.com/v1/current.json?key=9e7a402560384698834100634192305&q=" + ville).then(function(rep){
+    axios.get("https://api.apixu.com/v1/current.json?key=9e7a402560384698834100634192305&q=" + ville).then(function(rep){
     heure.innerHTML = rep.data.location.localtime;
 })
     if (response.data.weather[0].description == "clear sky"){
